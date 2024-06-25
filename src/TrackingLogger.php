@@ -143,7 +143,7 @@ class TrackingLogger implements TrackingLoggerInterface
     {
         $referrer = [];
 
-        $referrer['referrer_url'] = $this->request->headers->get('referer');
+        $referrer['referrer_url'] = $this->request->headers->get('referer') ?? '';
 
         $parsedUrl = parse_url($referrer['referrer_url']);
 
